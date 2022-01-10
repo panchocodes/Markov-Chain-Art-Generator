@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww18780\viewh13520\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 My proposal is formatted as a task list of major features, so the reader can get a feel for the priority of each part of the code and what I will accomplish first.\
+\
+1. The first main feature of my project will be the Markov chain model itself. This will be an object that inherits a dictionary. It\'92s keys will be the set of colors in the image, and these will be mapped to another dictionary that maps all the following possible colors to their frequencies relative to the original key. To rephrase, picture a chosen pixel with an assigned color, now all we are storing for this pixel is a set of all the following colors and the frequency of each color. This Markov Chain object will be written with a method that will take a string of colors and puts them into the chain properly. Another important benefit of this is the time efficiency of the dictionaries I will be using. This eases concerns of the program running slow as generating these chains are really only as expensive as iterating though the colors to take the data. Finally, at this point I will need to be able to properly generate the list of colors and have it resequenced back to an image (done in tech demo). \
+\
+2. The immediate following step will be to create higher order chains. For our original chain, the order is one because we are only looking at only the one color that precedes each color. A second order chain will look at the tuple of the previous two colors an proceed in the same process with the exact same data, but now with a different  and possibly more accurate result. This step will be to be able to create a Markov Chain given the data and the desired order n.\
+\
+3. This step will consist of creating another type of Markov chain. This chain will look at the neighboring colors for each color as opposed to looking at the pixels like one would read text. Theoretically this will do a better job of grouping colors and should look different from the original model. It will not involve creating a different object, but will involve parsing the image into possibly a 2d list as opposed to a string. The changeable parameters for this will also be different. The user will be able to choose whether or not the diagonals are included, and will still be able to change the order of the chain. Order will also work differently for this chain, as it will be the surrounding rings of pixels as opposed to the ones preceding it.  \
+\
+4. Next, I would like to implement a clean and nice looking UI for generating the chains and receiving output. The most basic functionalities are as follows: choosing one or more photos for creating the model, choosing either a linear or neighbor model, choosing an order and customizing the model, selecting either one or multiple outputs, and displaying the output. This does involve figuring out how to have multiple files uploaded and processed for the color values, and possibly saving the file or sending it somewhere should the user click a button. Also being able to save a generated model for later generation. \
+\
+5. Markov Chain Optimization. I want to be able for the user to have the ability to further tune their model. This would require some playing around with to figure out exactly what works, but it would involve editing the chain data to get better results. This could be done be smoothing out some extraneous values to make the processing look less random, or even trying to reproduce some semblance of shapes on the neighbor chains. \
+\
+5. The next major change to my project would involve teaching how the models work within the UI. It would integrate everything going on behind the scenes into what is actually being displayed so the user can learn a little bit about Markov models and how the code works. It would be geared toward the average 112 student. \
+\
+}
