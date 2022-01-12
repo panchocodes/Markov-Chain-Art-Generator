@@ -1,7 +1,10 @@
 # Markov Chain Art Generator
 
 Welcome to my Markov Chain Art Generation project! 
-Video describing this project: https://www.youtube.com/watch?v=bNWjJtTdNg4
+
+## Project Video
+
+https://www.youtube.com/watch?v=bNWjJtTdNg4
 
 ## Final Results
 
